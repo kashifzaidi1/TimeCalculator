@@ -48,7 +48,7 @@
 			</table>
 			</div>
 
-			<br/><button class="btn btn-lg btn-primary btn-block" id="newButton">New Calculation?</button> <br/>
+			<br/><button class="btn btn-lg btn-primary btn-block" class="newButton">New Calculation?</button> <br/>
 			<div class="table-responsive">
 			  <table class="table">
 			    <thead>
@@ -82,7 +82,7 @@
 			    </table>
 			</div>
 		</div>
-		<br/><button class="btn btn-lg btn-primary btn-block" id="newButton">New Calculation?</button> <br/>
+		<br/><button class="btn btn-lg btn-primary btn-block" class="newButton">New Calculation?</button> <br/>
 	</div>
 </body>
 
@@ -137,7 +137,7 @@
 		};
 
 		$(document).ready(function(){
-			$("#newButton").on('click',function(){
+			$(".newButton").on('click',function(){
 				$(".input-box").show();
 				$(".result-box").hide();
 
