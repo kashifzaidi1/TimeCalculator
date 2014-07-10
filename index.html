@@ -258,8 +258,10 @@
 				var dayMM2  = $("#dayMM2").val();
 				var nightHH2  = $("#nightHH2").val();
 				var nightMM2  = $("#nightMM2").val();
-				$("#datex1").html($("#date1").val());
-				$("#datex2").html($("#date2").val());
+				var date1 = new Date($("#date1").val());
+				var date2 = new Date($("#date2").val());
+				$("#datex1").html(date1.toDateString());
+				$("#datex2").html(date2.toDateString());
 
 
 				// hide this form
