@@ -58,12 +58,12 @@
 			    	</tr>
 			    	<tr class="danger">
 			    		
-			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime1"></span> </th>
+			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime1"></span> Medinah Munawwara</th>
 			    		<th colspan="1">1 hour in Day = <span id="dayMinutes1"></span> Minutes</th>
 			    		<th colspan="1">Sunset - Sunrise = <span id="ss-sr1"></span> </th>
 			    	</tr>
 			    	<tr class="danger">
-			    		<th colspan="1">Time of Sunset = <span id="SunsetTime1"></span> </th>
+			    		<th colspan="1">Time of Sunset = <span id="SunsetTime1"></span> Medinah Munawwara</th>
 			    		<th colspan="1">1 hour in Night = <span id="nightMinutes1"></span> Minutes</th>
 			    		<th colspan="1">Sunrise - Sunset = <span id="sr-ss1"></span> </th>
 			    	</tr>
@@ -76,9 +76,9 @@
 			  <table class="table">
 			    <thead>
 			    	<tr class="warning">
-			    		<th>From</th>
-			    		<th>To</th>
-			    		<th>Star</th>
+			    		<th>FROM</th>
+			    		<th>TO</th>
+			    		<th>RELEVANT STAR</th>
 			    		<th></th>
 			    		<th></th>
 			    		<th></th>
@@ -102,12 +102,12 @@
 			    	</tr>
 			    	<tr class="danger">
 			    		
-			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime2"></span> </th>
+			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime2"></span> Medinah Munawwara</th>
 			    		<th colspan="1">1 hour in Day = <span id="dayMinutes2"></span> Minutes</th>
 			    		<th colspan="1">Sunset - Sunrise = <span id="ss-sr2"></span> </th>
 			    	</tr>
 			    	<tr class="danger">
-			    		<th colspan="1">Time of Sunset = <span id="SunsetTime2"></span> </th>
+			    		<th colspan="1">Time of Sunset = <span id="SunsetTime2"></span> Medinah Munawwara</th>
 			    		<th colspan="1">1 hour in Night = <span id="nightMinutes2"></span> Minutes</th>
 			    		<th colspan="1">Sunrise - Sunset = <span id="sr-ss2"></span> </th>
 			    	</tr>
@@ -121,9 +121,9 @@
 			  <table class="table">
 			    <thead>
 			    	<tr class="warning">
-			    		<th>From</th>
-			    		<th>To</th>
-			    		<th>Star</th>
+			    		<th>FROM</th>
+			    		<th>TO</th>
+			    		<th>RELEVANT STAR</th>
 			    		<th></th>
 			    		<th></th>
 			    		<th></th>
@@ -260,9 +260,12 @@
 				var nightMM2  = $("#nightMM2").val();
 				var date1 = new Date($("#date1").val());
 				var date2 = new Date($("#date2").val());
-				$("#datex1").html(date1.toDateString());
-				$("#datex2").html(date2.toDateString());
-
+				var d1s = date1.toDateString();
+				var d2s = date2.toDateString();
+				date1.setDate(date1.getDate()+7);
+				date2.setDate(date2.getDate()+7);
+				$("#datex1").html(d1s+ " TO " + date1.toDateString() + "(Medinah Munawwara)");
+				$("#datex2").html(d2s+ " TO " + date2.toDateString() + "(Medinah Munawwara)");
 
 				// hide this form
 				$(".input-box").hide();
