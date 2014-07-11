@@ -42,7 +42,7 @@
 			
 			<div>
 				<h4 style="text-align:center;"> 
-					Daily detailed time table & guidelines in respect of new-born babies
+					Daily detailed time table & hourly guidelines in respect of new-born babies
 				</h4>
 				<h4 style="text-align:center;"> for MEDINAH MUNAWWARAH</h4>
 				<h4 style="text-align:center;">during <span id="datex1"></span></h4>
@@ -86,32 +86,7 @@
 			    		<td></td>
 			    		<td></td>
 			    		<td rowspan="26" id="row">
-			    			<br/>
-			    			<h5>Formula</h5>
-			    			<table class="table bigger">
-			    				<tbody>
-			    					<tr>
-			    						<th>Time of Sunrise = K</th>
-			    					</tr>
-			    					<tr>
-			    						<th>Time of Sunset = B</th>
-			    					</tr>
-			    					<tr>
-			    						<th>Time Between Sunrise - Sunset =  B - K</th>
-			    					</tr>
-			    					<tr>
-			    						<th>Time Between Sunset - Sunrise = K - B</th>
-			    					</tr>
-			    					<tr>
-			    						<th>1 Hour in Day =  Time Between Sunrise to Sunset in Minutes / 720 </th>
-			    					</tr>
-			    					<tr>
-			    						<th>1 Hour in Night = Time Between Sunset to Sunrise in Minutes / 720</th>
-			    					</tr>
-			    					
-			    				</tbody>
-			    			</table>
-			    			<br/>
+			    			
 			    			<h5>Calculations</h5>
 			    			<table class="table bigger">
 			    				<tbody>
@@ -291,26 +266,33 @@
         display: none;
     }
 
-    table {
+    .table {
     	font-size: 10px;
     	margin: 0px;
     	border: 1px solid black !important;
     }
-	td,th {
+	.table td, .table th {
 		border: 1px solid black !important;
 	}
-    th {
+    .table th {
     	font-size: 10px;
     	border: 1px solid black !important;
     }
 
-    td ,th{
+    .table td ,.table th{
     	padding-top: 0px !important;
     	padding-bottom: 0px !important;
     }
 
     .x {
     	margin-top: -20px !important;
+    }
+
+    .bigger td, .bigger th{
+    	font-color:red!important;
+    	font-size: 16px !important; 
+    	padding-top: 10px !important;
+    	padding-bottom: 10px !important;
     }
 }
 	</style>
