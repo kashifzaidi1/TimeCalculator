@@ -15,42 +15,41 @@
 <body>
 	<div class="container">
 		<div class="input-box"> 
-			<form class="form-sign">
 			<div class="row"> 
-				<div class="col-xs-6"> 
+				<div class="col-sm-6 col-md-4 col-md-offset-4"> 
 					<div class="account-wall"> 
-						<h4 class="warning text-center">Date</h4>
-						<input id="date1" type="date" class="form-control" placeholder="HH" required autofocus> 
-						<h4 class="warning text-center">Sunrise</h4> 
-						<input id="dayHH1" type="number" class="form-control" placeholder="HH" required autofocus> 
-						<input id="dayMM1" type="number" class="form-control" placeholder="MM" required autofocus>
-						<h4 class="success text-center">Sunset</h4> 
-						<input id="nightHH1" type="number" class="form-control" placeholder="HH" required autofocus> 
-						<input id="nightMM1" type="number" class="form-control" placeholder="MM" required autofocus> 
+						<p class="profile-name">Time Calculator</p> 
+						<form class="form-signin">
+							<h4 class="warning text-center">Date</h4>
+							<input id="date1" type="date" class="form-control" placeholder="HH" required autofocus>   
+							<h4 class="warning text-center">Sunrise</h4> 
+							<input id="dayHH1" type="number" class="form-control" placeholder="HH" required autofocus> 
+							<input id="dayMM1" type="number" class="form-control" placeholder="MM" required autofocus>
+							<h4 class="success text-center">Sunset</h4> 
+							<input id="nightHH1" type="number" class="form-control" placeholder="HH" required autofocus> 
+							<input id="nightMM1" type="number" class="form-control" placeholder="MM" required autofocus> 
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Calculate</button> 
+							<span class="clearfix"></span> 
+						</form> 
 					</div> 
-				</div> 
-				<div class="col-xs-6"> 
-					<div class="account-wall"> 
-						<h4 class="warning text-center">Date</h4>
-						<input id="date2" type="date" class="form-control" placeholder="HH" required autofocus> 
-						<h4 class="warning text-center">Sunrise</h4> 
-						<input id="dayHH2" type="number" class="form-control" placeholder="HH" required autofocus> 
-						<input id="dayMM2" type="number" class="form-control" placeholder="MM" required autofocus>
-						<h4 class="success text-center">Sunset</h4> 
-						<input id="nightHH2" type="number" class="form-control" placeholder="HH" required autofocus> 
-						<input id="nightMM2" type="number" class="form-control" placeholder="MM" required autofocus> 
-					</div> 
+					<h4 class="text-center new-account">All times are in 24-Hour format</h4>
 				</div> 
 			</div> 
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Calculate</button> 
-			<span class="clearfix"></span> 
-			</form> 
-			<h4 class="text-center new-account">All times are in 24-Hour format</h4>
 		</div>
 
+
 		<div class="result-box" style="display:none;">
+			
+			<div>
+				<h4 style="text-align:center;"> 
+					Daily detailed time table in respect of newborn babies
+				</h4>
+				<h4 style="text-align:center;"> for MEDINAH MUNAWWARAH</h4>
+				<h4 style="text-align:center;">during <span id="datex1"></span></h4>
+			</div>
 			<br/><br/>
-			<div class="table-responsive">
+
+			<div class="table-responsive" style="display:none;">
 			  <table class="table">
 			    <thead>
 			    	<tr>
@@ -58,87 +57,70 @@
 			    	</tr>
 			    	<tr class="danger">
 			    		
-			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime1"></span> (Medinah Munawwara)</th>
-			    		<th colspan="1">1 hour in Day = <span id="dayMinutes1"></span> Minutes</th>
-			    		<th colspan="1">Sunset - Sunrise = <span id="ss-sr1"></span> </th>
+			    		<th colspan="1">Time of Sunrise = <span id=""></span> (Medinah Munawwara)</th>
+			    		<th colspan="1">1 hour in Day = <span ></span> Minutes</th>
+			    		<th colspan="1">Sunset - Sunrise = <span ></span> </th>
 			    	</tr>
 			    	<tr class="danger">
-			    		<th colspan="1">Time of Sunset = <span id="SunsetTime1"></span> (Medinah Munawwara)</th>
-			    		<th colspan="1">1 hour in Night = <span id="nightMinutes1"></span> Minutes</th>
-			    		<th colspan="1">Sunrise - Sunset = <span id="sr-ss1"></span> </th>
+			    		<th colspan="1">Time of Sunset = <span ></span> (Medinah Munawwara)</th>
+			    		<th colspan="1">1 hour in Night = <span></span> Minutes</th>
+			    		<th colspan="1">Sunrise - Sunset = <span></span></th>
 			    	</tr>
-			    	
 			    </thead>
 			</table>
 			</div>
 			
-			<div class="table-responsive  x">
-			  <table class="table">
-			    <thead>
-			    	<tr class="warning">
-			    		<th>FROM</th>
-			    		<th>TO</th>
-			    		<th>RELEVANT STAR</th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    	</tr>
-			    </thead>
-			    <tbody class="dayBody1">
-			    	
-			    </tbody>
-			  </table>
-			</div>
-			<br/>
-			<div class="table-responsive">
-			  <table class="table">
-			    <thead>
-			    	<tr>
-			    		<th colspan="3">Date = <span id="datex2"></span></th>
-			    	</tr>
-			    	<tr class="danger">
-			    		
-			    		<th colspan="1">Time of Sunrise = <span id="SunRiseTime2"></span> (Medinah Munawwara)</th>
-			    		<th colspan="1">1 hour in Day = <span id="dayMinutes2"></span> Minutes</th>
-			    		<th colspan="1">Sunset - Sunrise = <span id="ss-sr2"></span> </th>
-			    	</tr>
-			    	<tr class="danger">
-			    		<th colspan="1">Time of Sunset = <span id="SunsetTime2"></span> (Medinah Munawwara)</th>
-			    		<th colspan="1">1 hour in Night = <span id="nightMinutes2"></span> Minutes</th>
-			    		<th colspan="1">Sunrise - Sunset = <span id="sr-ss2"></span> </th>
-			    	</tr>
-			    	
-			    </thead>
-			</table>
-			
-			<div class="b">
-			<br/><button class="btn btn-lg btn-primary btn-block newButton">New Calculation?</button><br/></div></div>
 			<div class="table-responsive x">
 			  <table class="table">
 			    <thead>
 			    	<tr class="warning">
-			    		<th>FROM</th>
-			    		<th>TO</th>
-			    		<th>RELEVANT STAR</th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
-			    		<th></th>
+			    		<th>From</th>
+			    		<th>To</th>
+			    		<th>Relevant star</th>
 			    		<th></th>
 			    	</tr>
 			    </thead>
-			    <tbody class="dayBody2">
-			    	
+			    <tbody class="dayBody1">
+			    	<tr>
+			    		<td></td>
+			    		<td></td>
+			    		<td></td>
+			    		<td rowspan="26" id="row">
+			    			<br/>
+			    			<h5>Briefing</h5>
+			    			<table class="table">
+			    				<tbody>
+			    					<tr>
+			    						<th>Sunrise</th>
+			    						<td><span id="SunRiseTime1"></span></td>
+			    					</tr>
+			    					<tr>
+			    						<th>Sunset</th>
+			    						<td><span id="SunsetTime1"></span></td>
+			    					</tr>
+			    					<tr>
+			    						<th>1 Hour in Day</th>
+			    						<td><span id="dayMinutes1"></span> Minutes</td>
+			    					</tr>
+			    					<tr>
+			    						<th>1 Hour in Night</th>
+			    						<td><span id="nightMinutes1"></span> Minutes</td>
+			    					</tr>
+			    					<tr>
+			    						<th>Sunset - Sunrise</th>
+			    						<td id="ss-sr1">53 : 38 </td>
+			    					</tr>
+			    					<tr>
+			    						<th>Sunrise - Sunset</th>
+			    						<td id="sr-ss1">53 : 38 </td>
+			    					</tr>
+			    				</tbody>
+			    			</table>
+			    		</td>
+			    	</tr>
 			    </tbody>
 			  </table>
 			</div>
-		
 		<div class="b"><br/><button class="btn btn-lg btn-primary btn-block newButton">New Calculation?</button> <br/></div>
 	</div>
 </body>
@@ -146,7 +128,7 @@
 <script type="text/javascript">
 
 		var start = function(dayHH,dayMM,nightHH,nightMM,number){
-			$(".dayBody"+number).html('');
+			// $(".dayBody"+number).html('');
 			var setTime = function(hours, minutes){
 				var t = new Date();
 				t.setHours(hours);
@@ -227,7 +209,8 @@
 				startTime.setMinutes(startTime.getMinutes() + minutesDay);
 				
 				var newT = startTime.getHours() + ":" + startTime.getMinutes();
-				$(".dayBody"+number).append("<tr><td>"+oldT+"</td><td>"+newT+"</td><td>"+getStarLetter(i)+"</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+				
+				$(".dayBody"+number).append("<tr><td>"+oldT+"</td><td>"+newT+"</td><td>"+getStarLetter(i)+"</tr>");
 			}
 
 			for(var i = 12; i <24; i++){
@@ -235,7 +218,7 @@
 				var oldT = startTime.getHours() + ":" + startTime.getMinutes();
 				startTime.setMinutes(startTime.getMinutes() + minutesNight);
 				var newT = startTime.getHours() + ":" + startTime.getMinutes();
-				$(".dayBody"+number).append("<tr><td>"+oldT+"</td><td>"+newT+"</td><td>"+getStarLetter(i)+"</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+				$(".dayBody"+number).append("<tr><td>"+oldT+"</td><td>"+newT+"</td><td>"+getStarLetter(i)+"</tr>");
 			}
 
 		};
@@ -247,7 +230,7 @@
 
 			});
 
-			$(".form-sign").on('submit', function(event){
+			$(".form-signin").on('submit', function(event){
 				event.preventDefault();
 				var dayHH1  = $("#dayHH1").val();
 				var dayMM1  = $("#dayMM1").val();
@@ -259,20 +242,19 @@
 				var nightHH2  = $("#nightHH2").val();
 				var nightMM2  = $("#nightMM2").val();
 				var date1 = new Date($("#date1").val());
-				var date2 = new Date($("#date2").val());
+				
 				var d1s = date1.toDateString();
-				var d2s = date2.toDateString();
-				date1.setDate(date1.getDate()+7);
-				date2.setDate(date2.getDate()+7);
-				$("#datex1").html(d1s+ " TO " + date1.toDateString() + " (Medinah Munawwara)");
-				$("#datex2").html(d2s+ " TO " + date2.toDateString() + " (Medinah Munawwara)");
+
+				date1.setDate(date1.getDate()+6);
+
+				$("#datex1").html(d1s+ " to " + date1.toDateString());
+
 
 				// hide this form
 				$(".input-box").hide();
 				$(".result-box").show();
 
 				start(dayHH1,dayMM1,nightHH1,nightMM1,1);
-				start(dayHH2,dayMM2,nightHH2,nightMM2,2);
 
 			});
 		});
