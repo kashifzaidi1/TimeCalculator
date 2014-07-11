@@ -42,7 +42,7 @@
 			
 			<div>
 				<h4 style="text-align:center;"> 
-					Daily detailed time table in respect of newborn babies
+					Daily detailed time table & guidelines in respect of new-born babies
 				</h4>
 				<h4 style="text-align:center;"> for MEDINAH MUNAWWARAH</h4>
 				<h4 style="text-align:center;">during <span id="datex1"></span></h4>
@@ -87,8 +87,33 @@
 			    		<td></td>
 			    		<td rowspan="26" id="row">
 			    			<br/>
-			    			<h5>Briefing</h5>
-			    			<table class="table">
+			    			<h5>Formula</h5>
+			    			<table class="table bigger">
+			    				<tbody>
+			    					<tr>
+			    						<th>Time of Sunrise = K</th>
+			    					</tr>
+			    					<tr>
+			    						<th>Time of Sunset = B</th>
+			    					</tr>
+			    					<tr>
+			    						<th>Time Between Sunrise - Sunset =  B - K</th>
+			    					</tr>
+			    					<tr>
+			    						<th>Time Between Sunset - Sunrise = K - B</th>
+			    					</tr>
+			    					<tr>
+			    						<th>1 Hour in Day =  Time Between Sunrise to Sunset in Minutes / 720 </th>
+			    					</tr>
+			    					<tr>
+			    						<th>1 Hour in Night = Time Between Sunset to Sunrise in Minutes / 720</th>
+			    					</tr>
+			    					
+			    				</tbody>
+			    			</table>
+			    			<br/>
+			    			<h5>Calculations</h5>
+			    			<table class="table bigger">
 			    				<tbody>
 			    					<tr>
 			    						<th>Sunrise</th>
@@ -243,11 +268,11 @@
 				var nightMM2  = $("#nightMM2").val();
 				var date1 = new Date($("#date1").val());
 				
-				var d1s = date1.toDateString();
+				var d1s = date1.toDateString().replace(/Sun |Mon |Tue |Wed |Thu |Fri |Sat /,'');
 
 				date1.setDate(date1.getDate()+6);
 
-				$("#datex1").html(d1s+ " to " + date1.toDateString());
+				$("#datex1").html(d1s+ " to " + date1.toDateString().replace(/Sun |Mon |Tue |Wed |Thu |Fri |Sat /,''));
 
 
 				// hide this form
